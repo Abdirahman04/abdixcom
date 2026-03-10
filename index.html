@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Abdirahman Hassan | Developer</title>
+
+        <style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:#e2e8f0;
+    line-height:1.6;
+}
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+}
+
+header{
+    padding:60px 0;
+    text-align:center;
+}
+
+header h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+header p{
+    color:#94a3b8;
+}
+
+nav{
+    margin-top:20px;
+}
+
+nav a{
+    color:#e2e8f0;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#38bdf8;
+}
+
+section{
+    padding:60px 0;
+    border-top:1px solid #1e293b;
+}
+
+h2{
+    margin-bottom:20px;
+    font-size:28px;
+    color:#38bdf8;
+}
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.skill{
+    background:#1e293b;
+    padding:8px 14px;
+    border-radius:6px;
+    font-size:14px;
+}
+
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.project{
+    background:#1e293b;
+    padding:20px;
+    border-radius:10px;
+}
+
+.project h3{
+    margin-bottom:10px;
+}
+
+.project p{
+    color:#94a3b8;
+    font-size:14px;
+}
+
+.project a{
+    display:inline-block;
+    margin-top:10px;
+    color:#38bdf8;
+    text-decoration:none;
+}
+
+footer{
+    text-align:center;
+    padding:40px 0;
+    border-top:1px solid #1e293b;
+    color:#94a3b8;
+}
+
+        </style>
+    </head>
+
+    <body>
+
+        <header class="container">
+            <h1>Abdirahman Hassan</h1>
+            <p>Programmer • Backend Developer • Systems Enthusiast</p>
+
+            <nav>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <section id="about">
+            <div class="container about">
+
+                <div>
+                    <h2>About Me</h2>
+                    <p>
+                    I am a developer focused on understanding programming at a deep level.
+                    My interests include backend systems, cybersecurity, low level programming,
+                    and building tools that solve real problems.
+                    </p>
+
+                    <p>
+                    I enjoy learning languages like C, C++, Python, Zig and working close to
+                    the operating system to understand how software really works.
+                    </p>
+                </div>
+
+                <div>
+                    <h2>What I Focus On</h2>
+                    <ul>
+                        <li>Backend systems</li>
+                        <li>System level programming</li>
+                        <li>Networking and HTTP servers</li>
+                        <li>Cybersecurity and pentesting</li>
+                        <li>Building developer tools</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="container">
+
+                <h2>Skills</h2>
+
+                <div class="skills">
+
+                    <div class="skill">Python</div>
+                    <div class="skill">C</div>
+                    <div class="skill">C++</div>
+                    <div class="skill">Zig</div>
+                    <div class="skill">PHP</div>
+                    <div class="skill">JavaScript</div>
+                    <div class="skill">HTML</div>
+                    <div class="skill">CSS</div>
+                    <div class="skill">Linux</div>
+                    <div class="skill">Bash</div>
+                    <div class="skill">PowerShell</div>
+                    <div class="skill">Networking</div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="container">
+
+                <h2>Projects</h2>
+
+                <div class="projects">
+
+                    <div class="project">
+                        <h3>Pattern Data Generator</h3>
+                        <p>
+                        A SaaS application that generates structured datasets based on user
+                        defined patterns. Built with a Nuxt frontend and Deno backend.
+                        </p>
+                        <a href="#">View Project</a>
+                    </div>
+
+                    <div class="project">
+                        <h3>Custom HTTP Server</h3>
+                        <p>
+                        An HTTP server built from scratch while learning networking concepts
+                        using low level languages.
+                        </p>
+                        <a href="#">View Project</a>
+                    </div>
+
+                    <div class="project">
+                        <h3>Linux Automation Tools</h3>
+                        <p>
+                        A collection of scripts for automating system tasks and improving
+                        workflow in Arch Linux.
+                        </p>
+                        <a href="#">View Project</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+
+                <h2>Contact</h2>
+
+                <p>Email: your-email@example.com</p>
+                <p>GitHub: github.com/yourusername</p>
+
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2026 Abdirahman Hassan</p>
+        </footer>
+
+    </body>
+</html>
