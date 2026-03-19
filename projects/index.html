@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500&amp;family=Space_Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <script id="tailwind-config">
+            tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary": "#b7c8dd",
+              "outline-variant": "#544434",
+              "on-tertiary-container": "#004861",
+              "tertiary-fixed": "#c2e8ff",
+              "surface-container-highest": "#31353c",
+              "primary-fixed": "#ffdcbc",
+              "on-error": "#690005",
+              "surface-dim": "#10141a",
+              "on-error-container": "#ffdad6",
+              "surface-container": "#1c2026",
+              "surface": "#10141a",
+              "error": "#ffb4ab",
+              "on-primary-container": "#613900",
+              "on-background": "#dfe2eb",
+              "inverse-surface": "#dfe2eb",
+              "outline": "#a18d7a",
+              "on-secondary-fixed": "#0c1d2c",
+              "inverse-primary": "#895200",
+              "on-primary-fixed-variant": "#683d00",
+              "primary-fixed-dim": "#ffb86a",
+              "on-surface": "#dfe2eb",
+              "on-primary": "#492900",
+              "tertiary": "#83d5ff",
+              "surface-container-high": "#262a31",
+              "error-container": "#93000a",
+              "surface-variant": "#31353c",
+              "secondary-container": "#3b4a5c",
+              "on-tertiary": "#003548",
+              "on-secondary-container": "#a9bacf",
+              "primary": "#ffbe77",
+              "on-secondary": "#223242",
+              "surface-container-low": "#181c22",
+              "surface-container-lowest": "#0a0e14",
+              "surface-bright": "#353940",
+              "tertiary-fixed-dim": "#75d1ff",
+              "surface-tint": "#ffb86a",
+              "inverse-on-surface": "#2d3137",
+              "secondary-fixed-dim": "#b7c8dd",
+              "tertiary-container": "#44bbef",
+              "on-secondary-fixed-variant": "#384859",
+              "background": "#10141a",
+              "primary-container": "#f69a1b",
+              "on-tertiary-fixed-variant": "#004d67",
+              "secondary-fixed": "#d3e4fa",
+              "on-tertiary-fixed": "#001e2b",
+              "on-primary-fixed": "#2c1700",
+              "on-surface-variant": "#d9c3ae"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+        </script>
+        <style>
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+      body {
+          background-color: #10141a;
+          color: #dfe2eb;
+      }
+        </style>
+    </head>
+    <body class="font-body selection:bg-primary-container selection:text-on-primary-container">
+        <!-- TopNavBar Component -->
+        <nav class="fixed top-0 w-full z-50 bg-[#10141a]/60 backdrop-blur-xl bg-gradient-to-b from-[#f69a1b]/5 to-transparent">
+            <div class="flex justify-between items-center max-w-7xl mx-auto px-8 py-4">
+                <div class="text-[#f69a1b] font-black tracking-tighter text-xl">AHASSAN.ZIG</div>
+                <div class="hidden md:flex items-center gap-8 font-['Manrope'] tracking-tighter uppercase text-sm font-bold">
+                    <a class="text-[#dfe2eb] hover:text-[#ffbe77] transition-colors" href="/">Home</a>
+                    <a class="text-[#dfe2eb] hover:text-[#ffbe77] transition-colors" href="../about/">About</a>
+                    <a class="text-[#f69a1b] border-b-2 border-[#f69a1b] pb-1" href="../projects/">Projects</a>
+                    <a class="text-[#dfe2eb] hover:text-[#ffbe77] transition-colors" href="../contact/">Contact</a>
+                </div>
+                <div class="flex items-center gap-4 text-[#f69a1b]">
+                    <span class="material-symbols-outlined hover:bg-[#1c2026] rounded-md transition-all duration-300 p-2 cursor-pointer">code</span>
+                    <span class="material-symbols-outlined hover:bg-[#1c2026] rounded-md transition-all duration-300 p-2 cursor-pointer">terminal</span>
+                </div>
+            </div>
+        </nav>
+        <main class="pt-32 pb-24 px-8 max-w-7xl mx-auto">
+            <!-- Header Section -->
+            <header class="mb-24">
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+                    <div class="max-w-2xl">
+                        <span class="font-label text-primary uppercase tracking-widest text-sm mb-4 block">Archive 2024</span>
+                        <h1 class="font-headline text-6xl md:text-8xl font-extrabold tracking-tighter leading-none text-on-surface">Selected<br/>Artifacts</h1>
+                    </div>
+                    <div class="font-label text-sm text-secondary max-w-xs text-right hidden md:block">
+                        [04] PRODUCTION GRADE PROJECTS DELIVERED WITH MEMORY-SAFE PRECISION AND ARCHITECTURAL INTEGRITY.
+                    </div>
+                </div>
+            </header>
+            <!-- Projects Bento Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+                <!-- Project Card 01 - Large -->
+                <div class="md:col-span-8 group relative overflow-hidden bg-surface-container-low">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-primary-container transform -translate-x-full group-hover:translate-x-0 transition-transform duration-700"></div>
+                    <div class="p-8 md:p-12 flex flex-col h-full">
+                        <div class="flex justify-between items-start mb-12">
+                            <div class="font-label text-xs text-primary bg-primary-container/10 px-3 py-1">CORE_ENGINE</div>
+                            <div class="flex gap-2">
+                                <span class="material-symbols-outlined text-on-surface-variant text-xl">hub</span>
+                                <span class="material-symbols-outlined text-on-surface-variant text-xl">open_in_new</span>
+                            </div>
+                        </div>
+                        <h3 class="font-headline text-4xl font-bold mb-4 group-hover:text-primary transition-colors">Z-Compiler v2</h3>
+                        <p class="text-secondary body-lg mb-8 max-w-md">A self-hosting compiler for a Zig-inspired subset of C, featuring advanced LLVM optimizations and lightning-fast build cycles.</p>
+                        <div class="mt-auto flex flex-wrap gap-3">
+                            <span class="font-label text-xs border border-outline-variant/20 px-3 py-1">ZIG</span>
+                            <span class="font-label text-xs border border-outline-variant/20 px-3 py-1">LLVM</span>
+                            <span class="font-label text-xs border border-outline-variant/20 px-3 py-1">X86_64</span>
+                        </div>
+                        <div class="absolute bottom-0 right-0 w-1/3 aspect-video bg-surface-container-high opacity-20 group-hover:opacity-40 transition-opacity" style="clip-path: polygon(100% 0, 0% 100%, 100% 100%);">
+                            <img class="w-full h-full object-cover" data-alt="Abstract code terminal with syntax highlighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANUCxYHZIcITy0tkoeKyqxIR2PVAs2oQnlueZuYz5NkRz0YhPPITERCV-XW_HyNMS5gl96mwQNQdwWygFydEAFOr3MSVaYmc68GG2tQn5VAMboGHIexUyYNK0wdTCamvUvivhc8b42DagHz3NagBiB6OCS53qEO8oLBYg-2uZR8EAIqKJ1r3eK6M9eDxapMKVSFp_1YJ8I7cyQEP6rr-Gx8DUmEMwn_SUCoRygwX0z_VQ7aRoaEoggssSAYqlGL2AY4sFl21alsqND"/>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 02 - Small -->
+                <div class="md:col-span-4 bg-surface-container p-8 group flex flex-col">
+                    <div class="font-label text-[10px] text-secondary/60 mb-6">PROJECT_ID: NEURAL_MESH</div>
+                    <h3 class="font-headline text-2xl font-bold mb-3">NeuralMesh</h3>
+                    <p class="text-on-surface-variant text-sm body-md mb-8">Decentralized AI inference engine running on edge devices using WebGPU.</p>
+                    <div class="mt-auto">
+                        <div class="flex gap-2 mb-6">
+                            <span class="font-label text-[10px] text-tertiary uppercase">Rust</span>
+                            <span class="font-label text-[10px] text-tertiary uppercase">Wasm</span>
+                        </div>
+                        <button class="w-full bg-surface-container-high py-3 font-label text-xs uppercase tracking-widest hover:bg-primary-container hover:text-on-primary-container transition-all">Explore Repo</button>
+                    </div>
+                </div>
+                <!-- Project Card 03 - Medium -->
+                <div class="md:col-span-5 bg-surface-container-high p-8 flex flex-col border-l-4 border-primary">
+                    <div class="mb-4 aspect-square bg-surface-container-lowest overflow-hidden">
+                        <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="Deep blue topographic data visualization pattern" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOB8rLsYOSGn368xuxTYQ5_hx8_Xwe5qHesivxWsk5dVkRU2h2qYehimvSpiDVr1J07nSPuBhwzwoC2tA7AQf5zk1X2ARHKY2eSgOPzGE7Lr0DQ2WQfok_-hYEa9G4ARIGbwy5euO7pGCyIkQXH7fhmya4zqNVLoDZLeQAHsU78MbDm4VvuJviylnM-g7KMkHp52viyZkqXyks5sAzHYbCCgNUyhe0hy4Y2MCh8H7yL0dulgRxT03fUFpFIEcNcXc1IHFnwZrCkPqd"/>
+                    </div>
+                    <h3 class="font-headline text-2xl font-bold mb-2">Aether OS</h3>
+                    <p class="text-secondary text-sm mb-6">A microkernel operating system written for the RISC-V architecture focusing on extreme isolation.</p>
+                    <div class="flex justify-between items-center mt-auto">
+                        <div class="font-label text-xs text-outline">RISC-V / C++</div>
+                        <span class="material-symbols-outlined text-primary">arrow_forward</span>
+                    </div>
+                </div>
+                <!-- Project Card 04 - Long Horizontal -->
+                <div class="md:col-span-7 bg-surface-container-low p-10 relative group">
+                    <div class="grid md:grid-cols-2 gap-8 items-center h-full">
+                        <div>
+                            <h3 class="font-headline text-3xl font-bold mb-4">FluxDB</h3>
+                            <p class="text-secondary text-sm mb-6">High-throughput time-series database optimized for IoT telemetry streams with zero-copy deserialization.</p>
+                            <ul class="space-y-2 mb-8">
+                                <li class="flex items-center gap-2 text-xs font-label text-on-surface-variant">
+                                    <span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span> 1M writes/sec
+                                </li>
+                                <li class="flex items-center gap-2 text-xs font-label text-on-surface-variant">
+                                    <span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span> S3 Cold Storage
+                                </li>
+                            </ul>
+                            <div class="flex gap-4">
+                                <a class="text-primary font-label text-xs uppercase underline underline-offset-4 hover:text-on-surface transition-colors" href="#">Documentation</a>
+                                <a class="text-on-surface-variant font-label text-xs uppercase hover:text-primary transition-colors" href="#">GitHub</a>
+                            </div>
+                        </div>
+                        <div class="hidden md:block h-full bg-surface-container-lowest p-4">
+                            <div class="w-full h-full border border-outline-variant/10 flex items-center justify-center">
+                                <span class="font-label text-[10px] text-primary/40 text-center leading-relaxed">
+                                    {<br/>
+                                      "cluster": "flux-01",<br/>
+                                      "status": "active",<br/>
+                                      "uptime": "342d:12h"<br/>
+                                    }
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Experience Sidebar / Progressive Disclosure List -->
+            <section class="mt-32">
+                <h2 class="font-headline text-3xl font-bold mb-12 border-b border-outline-variant/10 pb-4">Technical Proficiencies</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-1">
+                    <div class="bg-surface-container p-8 hover:bg-surface-container-high transition-colors group cursor-default">
+                        <div class="text-primary font-label text-sm mb-4">SYSTEMS_LEVEL</div>
+                        <h4 class="font-headline text-xl mb-4 text-on-surface">Memory Management</h4>
+                        <p class="text-secondary text-sm opacity-60 group-hover:opacity-100 transition-opacity">Expertise in manual memory allocation, pointer arithmetic, and heap optimization in Zig/Rust/C environments.</p>
+                    </div>
+                    <div class="bg-surface-container p-8 hover:bg-surface-container-high transition-colors group cursor-default">
+                        <div class="text-primary font-label text-sm mb-4">DISTRIBUTED</div>
+                        <h4 class="font-headline text-xl mb-4 text-on-surface">Consistency Models</h4>
+                        <p class="text-secondary text-sm opacity-60 group-hover:opacity-100 transition-opacity">Implementation of Raft consensus and CRDTs for eventual consistency in global-scale architectures.</p>
+                    </div>
+                    <div class="bg-surface-container p-8 hover:bg-surface-container-high transition-colors group cursor-default">
+                        <div class="text-primary font-label text-sm mb-4">FRONTEND_TECH</div>
+                        <h4 class="font-headline text-xl mb-4 text-on-surface">Low-Latency UI</h4>
+                        <p class="text-secondary text-sm opacity-60 group-hover:opacity-100 transition-opacity">Developing reactive interfaces with a focus on frame-budgeting and minimizing main-thread blocking.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer Component -->
+        <footer class="w-full border-t border-[#f69a1b]/10 bg-[#0a0e14]">
+            <div class="flex flex-col md:flex-row justify-between items-center py-12 px-8 max-w-7xl mx-auto">
+                <div class="text-[#dfe2eb] font-bold mb-4 md:mb-0 font-['Space_Grotesk'] text-xs tracking-widest uppercase">
+                    © 2024 Abdirahman Hassan. Built with Zig philosophy.
+                </div>
+                <div class="flex gap-8">
+                    <a class="text-[#dfe2eb]/60 font-['Space_Grotesk'] text-xs tracking-widest uppercase hover:text-[#f69a1b] transition-colors duration-200" href="#">GitHub</a>
+                    <a class="text-[#dfe2eb]/60 font-['Space_Grotesk'] text-xs tracking-widest uppercase hover:text-[#f69a1b] transition-colors duration-200" href="#">LinkedIn</a>
+                    <a class="text-[#dfe2eb]/60 font-['Space_Grotesk'] text-xs tracking-widest uppercase hover:text-[#f69a1b] transition-colors duration-200" href="#">Twitter</a>
+                </div>
+            </div>
+        </footer>
+    </body></html>
