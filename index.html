@@ -1,251 +1,289 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Abdirahman Hassan | Developer</title>
 
+<html class="dark" lang="en"><head>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <title>AHASSAN.ZIG | Full-Stack Developer</title>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+        <script id="tailwind-config">
+            tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "secondary": "#b7c8dd",
+                "outline-variant": "#544434",
+                "on-tertiary-container": "#004861",
+                "tertiary-fixed": "#c2e8ff",
+                "surface-container-highest": "#31353c",
+                "primary-fixed": "#ffdcbc",
+                "on-error": "#690005",
+                "surface-dim": "#10141a",
+                "on-error-container": "#ffdad6",
+                "surface-container": "#1c2026",
+                "surface": "#10141a",
+                "error": "#ffb4ab",
+                "on-primary-container": "#613900",
+                "on-background": "#dfe2eb",
+                "inverse-surface": "#dfe2eb",
+                "outline": "#a18d7a",
+                "on-secondary-fixed": "#0c1d2c",
+                "inverse-primary": "#895200",
+                "on-primary-fixed-variant": "#683d00",
+                "primary-fixed-dim": "#ffb86a",
+                "on-surface": "#dfe2eb",
+                "on-primary": "#492900",
+                "tertiary": "#83d5ff",
+                "surface-container-high": "#262a31",
+                "error-container": "#93000a",
+                "surface-variant": "#31353c",
+                "secondary-container": "#3b4a5c",
+                "on-tertiary": "#003548",
+                "on-secondary-container": "#a9bacf",
+                "primary": "#ffbe77",
+                "on-secondary": "#223242",
+                "surface-container-low": "#181c22",
+                "surface-container-lowest": "#0a0e14",
+                "surface-bright": "#353940",
+                "tertiary-fixed-dim": "#75d1ff",
+                "surface-tint": "#ffb86a",
+                "inverse-on-surface": "#2d3137",
+                "secondary-fixed-dim": "#b7c8dd",
+                "tertiary-container": "#44bbef",
+                "on-secondary-fixed-variant": "#384859",
+                "background": "#10141a",
+                "primary-container": "#f69a1b",
+                "on-tertiary-fixed-variant": "#004d67",
+                "secondary-fixed": "#d3e4fa",
+                "on-tertiary-fixed": "#001e2b",
+                "on-primary-fixed": "#2c1700",
+                "on-surface-variant": "#d9c3ae"
+              },
+              fontFamily: {
+                "headline": ["Manrope"],
+                "body": ["Inter"],
+                "label": ["Space Grotesk"]
+              },
+              borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+            },
+          },
+        }
+        </script>
         <style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
-
-body{
-    background:#0f172a;
-    color:#e2e8f0;
-    line-height:1.6;
-}
-
-.container{
-    width:90%;
-    max-width:1100px;
-    margin:auto;
-}
-
-header{
-    padding:60px 0;
-    text-align:center;
-}
-
-header h1{
-    font-size:42px;
-    margin-bottom:10px;
-}
-
-header p{
-    color:#94a3b8;
-}
-
-nav{
-    margin-top:20px;
-}
-
-nav a{
-    color:#e2e8f0;
-    text-decoration:none;
-    margin:0 15px;
-    font-weight:bold;
-}
-
-nav a:hover{
-    color:#38bdf8;
-}
-
-section{
-    padding:60px 0;
-    border-top:1px solid #1e293b;
-}
-
-h2{
-    margin-bottom:20px;
-    font-size:28px;
-    color:#38bdf8;
-}
-
-.about{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:40px;
-}
-
-.skills{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-}
-
-.skill{
-    background:#1e293b;
-    padding:8px 14px;
-    border-radius:6px;
-    font-size:14px;
-}
-
-.projects{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
-
-.project{
-    background:#1e293b;
-    padding:20px;
-    border-radius:10px;
-}
-
-.project h3{
-    margin-bottom:10px;
-}
-
-.project p{
-    color:#94a3b8;
-    font-size:14px;
-}
-
-.project a{
-    display:inline-block;
-    margin-top:10px;
-    color:#38bdf8;
-    text-decoration:none;
-}
-
-footer{
-    text-align:center;
-    padding:40px 0;
-    border-top:1px solid #1e293b;
-    color:#94a3b8;
-}
-
+        body {
+            background-color: #10141a;
+            color: #dfe2eb;
+        }
         </style>
     </head>
-
-    <body>
-
-        <header class="container">
-            <h1>Abdirahman Hassan</h1>
-            <p>Programmer • Backend Developer • Systems Enthusiast</p>
-
-            <nav>
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </header>
-
-        <section id="about">
-            <div class="container about">
-
-                <div>
-                    <h2>About Me</h2>
-                    <p>
-                    I am a developer focused on understanding programming at a deep level.
-                    My interests include backend systems, cybersecurity, low level programming,
-                    and building tools that solve real problems.
-                    </p>
-
-                    <p>
-                    I enjoy learning languages like C, C++, Python, Zig and working close to
-                    the operating system to understand how software really works.
-                    </p>
+    <body class="font-body selection:bg-primary/30 selection:text-primary">
+        <!-- TopNavBar -->
+        <nav class="fixed top-0 w-full z-50 bg-[#10141a]/60 backdrop-blur-xl bg-gradient-to-b from-[#f69a1b]/5 to-transparent">
+            <div class="flex justify-between items-center max-w-7xl mx-auto px-8 py-4">
+                <div class="text-[#f69a1b] font-black tracking-tighter text-xl">AHASSAN.ZIG</div>
+                <div class="hidden md:flex items-center gap-8 font-['Manrope'] tracking-tighter uppercase text-sm font-bold">
+                    <a class="text-[#f69a1b] border-b-2 border-[#f69a1b] pb-1" href="#">Home</a>
+                    <a class="text-[#dfe2eb] hover:text-[#ffbe77] transition-colors" href="#">About</a>
+                    <a class="text-[#dfe2eb] hover:text-[#ffbe77] transition-colors" href="#">Projects</a>
+                    <a class="text-[#dfe2eb] hover:text-[#ffbe77] transition-colors" href="#">Contact</a>
                 </div>
-
-                <div>
-                    <h2>What I Focus On</h2>
-                    <ul>
-                        <li>Backend systems</li>
-                        <li>System level programming</li>
-                        <li>Networking and HTTP servers</li>
-                        <li>Cybersecurity and pentesting</li>
-                        <li>Building developer tools</li>
-                    </ul>
+                <div class="flex items-center gap-4">
+                    <button class="p-2 hover:bg-[#1c2026] rounded-md transition-all duration-300 text-[#dfe2eb] active:scale-95 transition-transform">
+                        <span class="material-symbols-outlined" data-icon="code">code</span>
+                    </button>
+                    <button class="p-2 hover:bg-[#1c2026] rounded-md transition-all duration-300 text-[#dfe2eb] active:scale-95 transition-transform">
+                        <span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+                    </button>
                 </div>
-
             </div>
-        </section>
-
-        <section id="skills">
-            <div class="container">
-
-                <h2>Skills</h2>
-
-                <div class="skills">
-
-                    <div class="skill">Python</div>
-                    <div class="skill">C</div>
-                    <div class="skill">C++</div>
-                    <div class="skill">Zig</div>
-                    <div class="skill">PHP</div>
-                    <div class="skill">JavaScript</div>
-                    <div class="skill">HTML</div>
-                    <div class="skill">CSS</div>
-                    <div class="skill">Linux</div>
-                    <div class="skill">Bash</div>
-                    <div class="skill">PowerShell</div>
-                    <div class="skill">Networking</div>
-
-                </div>
-
-            </div>
-        </section>
-
-        <section id="projects">
-            <div class="container">
-
-                <h2>Projects</h2>
-
-                <div class="projects">
-
-                    <div class="project">
-                        <h3>Website Builder</h3>
-                        <p>
-                        A tool that enables users to create beautiful webpages using
-                        pre-made element templates.
+        </nav>
+        <main>
+            <!-- Hero Section -->
+            <section class="relative min-h-screen flex items-center pt-24 pb-20 px-8 max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-8">
+                        <div class="mb-6 inline-flex items-center gap-2 bg-surface-container-low px-4 py-2 rounded-full border border-outline-variant/10">
+                            <span class="w-2 h-2 bg-primary-container rounded-full animate-pulse"></span>
+                            <span class="font-label text-xs uppercase tracking-widest text-primary">Based in Nairobi, Kenya</span>
+                        </div>
+                        <h1 class="font-headline text-6xl md:text-8xl font-extrabold tracking-tighter text-on-surface mb-8">
+                            Architecting <span class="text-primary-container">System</span> Stability.
+                        </h1>
+                        <p class="font-body text-lg md:text-xl text-on-surface-variant max-w-2xl leading-relaxed mb-10">
+                        I am Abdirahman Hassan, a full-stack engineer building high-performance applications with a focus on memory safety and technical elegance. Currently obsessed with the <span class="text-primary italic">Zig</span> philosophy of simplicity and control.
                         </p>
-                        <a href="https://github.com/Abdirahman04/webraforge">View Project</a>
+                        <div class="flex flex-wrap gap-6">
+                            <button class="bg-primary-container text-on-primary-container px-8 py-4 font-label font-bold uppercase tracking-wider text-sm rounded shadow-[inset_0px_1px_0px_rgba(255,255,255,0.1)] hover:brightness-110 active:scale-95 transition-all">
+                                View Manifest
+                            </button>
+                            <button class="border border-outline-variant/30 text-primary px-8 py-4 font-label font-bold uppercase tracking-wider text-sm rounded hover:bg-surface-container transition-all">
+                                Read Blog
+                            </button>
+                        </div>
                     </div>
-
-                    <div class="project">
-                        <h3>Pattern Data Generator</h3>
-                        <p>
-                        An api that generates structured datasets based on user
-                        defined patterns. Built with zig.
-                        </p>
-                        <a href="https://github.com/Abdirahman04/datagen">View Project</a>
+                    <div class="lg:col-span-4 relative hidden lg:block">
+                        <div class="aspect-square bg-surface-container-high rounded-xl overflow-hidden relative group">
+                            <img alt="Technical abstract hardware" class="w-full h-full object-cover opacity-60 mix-blend-luminosity group-hover:opacity-100 transition-opacity duration-700" data-alt="Close up view of high performance computer hardware circuit board" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLSUa9TX0U7Uf8eFvmTtaaUX5BptGHp2lrQ_AZt1GlzudlujJF4lLrQBuKXFTUU0WqJiHg0p3ftkX-AcMDKUU63B0JRVqBuIF5sVz5iEy-xhhl4mkXtHCyEoqs2COQrSLp15lXD00wNYXe4yM8gRmf5teV7VlbhnXbWDdj-e00qxkkQxlowC5xuqlMsESjG3gMR7JB6GhzECxO_jOzIh6kCFHaSHHUZbL5lSAW-mPWkGKCrXQctQefR7E6GOMrS0WpCnFFZuz99CWR"/>
+                            <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+                            <div class="absolute bottom-6 left-6 right-6">
+                                <div class="font-label text-[10px] uppercase tracking-[0.2em] text-primary mb-2">Current Activity</div>
+                                <div class="font-body text-sm font-medium">Refactoring Kernel Modules</div>
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="project">
-                        <h3>Custom HTTP Server</h3>
-                        <p>
-                        An HTTP server built from scratch while learning networking concepts
-                        using low level languages. Built with C.
-                        </p>
-                        <a href="https://github.com/Abdirahman04/httpc">View Project</a>
-                    </div>
-
                 </div>
-
+            </section>
+            <!-- Skills Section (Tonal Shift) -->
+            <section class="bg-surface-container-low py-24 px-8">
+                <div class="max-w-7xl mx-auto">
+                    <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+                        <div>
+                            <span class="font-label text-xs uppercase tracking-[0.3em] text-primary block mb-4">Core Competencies</span>
+                            <h2 class="font-headline text-4xl md:text-5xl font-bold tracking-tight">Technical Arsenal</h2>
+                        </div>
+                        <div class="font-label text-sm text-on-surface-variant max-w-xs text-right hidden md:block">
+                            Proprietary stack optimized for concurrency, safety, and rapid deployment.
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-outline-variant/10">
+                        <!-- Skill Item -->
+                        <div class="bg-surface p-8 group hover:bg-surface-container transition-colors">
+                            <span class="material-symbols-outlined text-primary mb-6 text-3xl" data-icon="memory">memory</span>
+                            <h3 class="font-headline text-xl font-bold mb-4">Systems Engineering</h3>
+                            <p class="font-body text-sm text-on-surface-variant mb-6">Low-level optimization using Zig and Rust. Manual memory management specialist.</p>
+                            <div class="font-label text-[10px] uppercase tracking-widest text-primary/60">Zig / C / LLVM</div>
+                        </div>
+                        <!-- Skill Item -->
+                        <div class="bg-surface p-8 group hover:bg-surface-container transition-colors">
+                            <span class="material-symbols-outlined text-primary mb-6 text-3xl" data-icon="layers">layers</span>
+                            <h3 class="font-headline text-xl font-bold mb-4">Full-Stack Flow</h3>
+                            <p class="font-body text-sm text-on-surface-variant mb-6">Designing reactive interfaces with TypeScript and high-throughput Go backends.</p>
+                            <div class="font-label text-[10px] uppercase tracking-widest text-primary/60">Next.js / Go / Bun</div>
+                        </div>
+                        <!-- Skill Item -->
+                        <div class="bg-surface p-8 group hover:bg-surface-container transition-colors">
+                            <span class="material-symbols-outlined text-primary mb-6 text-3xl" data-icon="database">database</span>
+                            <h3 class="font-headline text-xl font-bold mb-4">Data Persistence</h3>
+                            <p class="font-body text-sm text-on-surface-variant mb-6">Complex schema design and query optimization for distributed databases.</p>
+                            <div class="font-label text-[10px] uppercase tracking-widest text-primary/60">Postgres / Redis / Scylla</div>
+                        </div>
+                        <!-- Skill Item -->
+                        <div class="bg-surface p-8 group hover:bg-surface-container transition-colors">
+                            <span class="material-symbols-outlined text-primary mb-6 text-3xl" data-icon="terminal">terminal</span>
+                            <h3 class="font-headline text-xl font-bold mb-4">DevOps &amp; Cloud</h3>
+                            <p class="font-body text-sm text-on-surface-variant mb-6">Container orchestration and automated CI/CD pipelines for zero-downtime.</p>
+                            <div class="font-label text-[10px] uppercase tracking-widest text-primary/60">Docker / K8s / AWS</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Featured Work Section -->
+            <section class="py-24 px-8 max-w-7xl mx-auto">
+                <div class="mb-16">
+                    <span class="font-label text-xs uppercase tracking-[0.3em] text-primary block mb-4">Selected Deployments</span>
+                    <h2 class="font-headline text-4xl md:text-5xl font-bold tracking-tight">Featured Projects</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+                    <!-- Large Project Card -->
+                    <div class="md:col-span-7 bg-surface-container-low overflow-hidden group">
+                        <div class="aspect-video bg-surface-container-high overflow-hidden relative">
+                            <img alt="Blockchain visualization" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80" data-alt="Abstract 3D digital network of floating geometric nodes and lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGoRMwwsoGGPqZCqw_ajCtu0YYjkwxYDsoYVt5dkREBbvj1xsBPaMO2zxe6ulUsMUBHQOBFSjQhmAhdQRs56daIHAsXVYgYQZ3WVKcwRgCoosPvxwxyoTRLwps2NNMRStLfJ6pUlpjrVq4TwfCr76B_qN_WJwRznSSwPycrnar6qKQdkoqenF8obz8MrInuhrcWDtVpxAckQtI6PGgkjpiZy2j4CuOxxq6dtLeD-D_GB-FG7Vv2LnaubWUfWM48dmsvR4lWUCI9vOo"/>
+                            <div class="absolute top-4 right-4 bg-surface/80 backdrop-blur px-3 py-1 rounded">
+                                <span class="font-label text-[10px] uppercase text-primary">In Production</span>
+                            </div>
+                        </div>
+                        <div class="p-8">
+                            <div class="flex items-center gap-4 mb-4">
+                                <span class="font-label text-xs text-primary bg-primary/5 px-2 py-1">2024</span>
+                                <span class="font-label text-xs text-on-surface-variant">Distributed Computing</span>
+                            </div>
+                            <h3 class="font-headline text-2xl font-bold mb-4">ZigMesh: Peer-to-Peer OS</h3>
+                            <p class="font-body text-on-surface-variant leading-relaxed mb-8">
+                            A decentralized operating system kernel built entirely in Zig, prioritizing low-latency networking and verifiable cryptographic state across nodes.
+                            </p>
+                            <a class="inline-flex items-center gap-2 font-label text-sm uppercase font-bold text-primary group-hover:gap-4 transition-all underline decoration-primary/20 underline-offset-8 decoration-2 hover:decoration-primary" href="#">
+                                Explore Repository <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Secondary Projects Stack -->
+                    <div class="md:col-span-5 space-y-8">
+                        <!-- Small Project 1 -->
+                        <div class="bg-surface-container-low p-6 flex gap-6 items-center group">
+                            <div class="w-24 h-24 shrink-0 bg-surface-container-highest rounded overflow-hidden">
+                                <img alt="Server rack" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" data-alt="Server hardware interior with glowing blue lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_lqPXgatqdC5n8buprts7g0Y8Ta2ACek5NIo3wUgZA9JfRa6ZA0tCJwPoNtbFIpShbRMdlNSLvIpOkS9tYXxhaf-5Y4gfiuoajohsnVPW6etRq0FccT0JFog3xCDpUYHPdkTtEqPCJzohpKgZGV9QHqkEXsg59lcjxQX9xglNtN3RYTPv8a88uWjiol1RZVS8711HmZHVeM6yhrRRazCe7YPLFusOjm2CJ3CJYD4DthPm5iUS8pDhdiRagaG6MP4WfMtRA0QClxYe"/>
+                            </div>
+                            <div>
+                                <h4 class="font-headline font-bold text-lg mb-2">TurboDB-Core</h4>
+                                <p class="font-body text-xs text-on-surface-variant line-clamp-2">LSM-tree based key-value store optimized for NVMe drives using direct I/O.</p>
+                                <div class="mt-3 font-label text-[10px] text-tertiary">Rust / Storage</div>
+                            </div>
+                        </div>
+                        <!-- Small Project 2 -->
+                        <div class="bg-surface-container-low p-6 flex gap-6 items-center group">
+                            <div class="w-24 h-24 shrink-0 bg-surface-container-highest rounded overflow-hidden">
+                                <img alt="Global network" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" data-alt="Digital globe representation with glowing connection lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYuGtO1lFP5-HFDleGv446CY5fGte4_QcokLvMiz_BJoJLnnZJ53yeOi0nnULEheayzqbaxogUUSris9Doa9GwCDewAl_R0ykYhcpv05HBCI3nTnZndPXzrmnVQGo6wEu9SZfgNFTbZ-8e7TWlljmapE1G7AUhrlFuADCSyG0G4Z7MqFUPNZdfee49cwRetxUqBzOeUikhWQQLgufjpyokLWrpa287tnN8srTLzsT8_qzWEjSmeFOzCq1VAGAbMZRdO7hnleev8hqE"/>
+                            </div>
+                            <div>
+                                <h4 class="font-headline font-bold text-lg mb-2">AeroEngine.io</h4>
+                                <p class="font-body text-xs text-on-surface-variant line-clamp-2">Real-time collaboration engine supporting 50k+ concurrent websocket connections.</p>
+                                <div class="mt-3 font-label text-[10px] text-tertiary">Go / WebSockets</div>
+                            </div>
+                        </div>
+                        <!-- Small Project 3 -->
+                        <div class="bg-surface-container-low p-6 flex gap-6 items-center group">
+                            <div class="w-24 h-24 shrink-0 bg-surface-container-highest rounded overflow-hidden">
+                                <img alt="Processor chip" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" data-alt="Computer microprocessor chip on green motherboard circuit" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzvBhI8uH23__43DWL32UQvskgEW-14lC8qDszOqREeaqUt9XHcdftTav4ZgAKaxcszNPvN0ZiC3aMqb5wyKUEdaQ6gg4St7CtixoZXljxf-ZJjeRchCAU_8ajJWP-8IDzRtPzEPmMWJfx5UC5BQf4-OuBvXp4VO7lDDSNCXp_lRY2K0gcxB9h5gsmPqJznXdcPp_6lbKuBjAT-vgkGAZ-meBDfln91sF8H3FtAx05PLcCy_ATCj6JHGBGNtpEz69non3WXJuh-OVI"/>
+                            </div>
+                            <div>
+                                <h4 class="font-headline font-bold text-lg mb-2">SynthCompiler</h4>
+                                <p class="font-body text-xs text-on-surface-variant line-clamp-2">LLVM-based compiler for a custom hardware description language.</p>
+                                <div class="mt-3 font-label text-[10px] text-tertiary">C++ / LLVM</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- CTA Section -->
+            <section class="py-24 px-8 max-w-7xl mx-auto mb-20">
+                <div class="bg-surface-container-highest p-12 md:p-20 relative overflow-hidden rounded">
+                    <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/10 to-transparent pointer-events-none"></div>
+                    <div class="relative z-10 max-w-2xl">
+                        <h2 class="font-headline text-4xl md:text-5xl font-extrabold tracking-tight mb-6">Need a <span class="text-primary italic">resilient</span> architecture?</h2>
+                        <p class="font-body text-on-surface-variant text-lg mb-10">
+                        I am currently available for high-impact engineering roles and consulting on systems-level architecture. Let's build something that lasts.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <button class="bg-primary-container text-on-primary-container px-8 py-4 font-label font-bold uppercase text-sm rounded hover:brightness-110 transition-all">
+                                Initialize Project
+                            </button>
+                            <button class="bg-surface-container text-on-surface px-8 py-4 font-label font-bold uppercase text-sm rounded border border-outline-variant/20 hover:bg-surface-bright transition-all">
+                                Download CV.pdf
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer -->
+        <footer class="w-full border-t border-[#f69a1b]/10 bg-[#0a0e14]">
+            <div class="flex flex-col md:flex-row justify-between items-center py-12 px-8 max-w-7xl mx-auto">
+                <div class="mb-8 md:mb-0">
+                    <div class="text-[#dfe2eb] font-bold text-lg mb-2">AHASSAN.ZIG</div>
+                    <p class="font-['Space_Grotesk'] text-xs tracking-widest uppercase text-[#dfe2eb]/60">© 2024 Abdirahman Hassan. Built with Zig philosophy.</p>
+                </div>
+                <div class="flex gap-8 font-['Space_Grotesk'] text-xs tracking-widest uppercase">
+                    <a class="text-[#dfe2eb]/60 hover:text-[#f69a1b] transition-colors duration-200" href="#">GitHub</a>
+                    <a class="text-[#dfe2eb]/60 hover:text-[#f69a1b] transition-colors duration-200" href="#">LinkedIn</a>
+                    <a class="text-[#dfe2eb]/60 hover:text-[#f69a1b] transition-colors duration-200" href="#">Twitter</a>
+                </div>
             </div>
-        </section>
-
-        <section id="contact">
-            <div class="container">
-
-                <h2>Contact</h2>
-
-                <p>Email: abdixcom@gmail.com</p>
-                <p>GitHub: github.com/Abdirahman04</p>
-
-            </div>
-        </section>
-
-        <footer>
-            <p>© 2026 Abdirahman Hassan</p>
         </footer>
+    </body></html>
 
-    </body>
-</html>
