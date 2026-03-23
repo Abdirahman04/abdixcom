@@ -1,289 +1,869 @@
 <!DOCTYPE html>
-
-<html class="dark" lang="en"><head>
-        <meta charset="utf-8"/>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-        <title>AHASSAN.ZIG | Full-Stack Developer</title>
-        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
-        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-        <script id="tailwind-config">
-            tailwind.config = {
-          darkMode: "class",
-          theme: {
-            extend: {
-              colors: {
-                "secondary": "#b7c8dd",
-                "outline-variant": "#544434",
-                "on-tertiary-container": "#004861",
-                "tertiary-fixed": "#c2e8ff",
-                "surface-container-highest": "#31353c",
-                "primary-fixed": "#ffdcbc",
-                "on-error": "#690005",
-                "surface-dim": "#10141a",
-                "on-error-container": "#ffdad6",
-                "surface-container": "#1c2026",
-                "surface": "#10141a",
-                "error": "#ffb4ab",
-                "on-primary-container": "#613900",
-                "on-background": "#dfe2eb",
-                "inverse-surface": "#dfe2eb",
-                "outline": "#a18d7a",
-                "on-secondary-fixed": "#0c1d2c",
-                "inverse-primary": "#895200",
-                "on-primary-fixed-variant": "#683d00",
-                "primary-fixed-dim": "#ffb86a",
-                "on-surface": "#dfe2eb",
-                "on-primary": "#492900",
-                "tertiary": "#83d5ff",
-                "surface-container-high": "#262a31",
-                "error-container": "#93000a",
-                "surface-variant": "#31353c",
-                "secondary-container": "#3b4a5c",
-                "on-tertiary": "#003548",
-                "on-secondary-container": "#a9bacf",
-                "primary": "#ffbe77",
-                "on-secondary": "#223242",
-                "surface-container-low": "#181c22",
-                "surface-container-lowest": "#0a0e14",
-                "surface-bright": "#353940",
-                "tertiary-fixed-dim": "#75d1ff",
-                "surface-tint": "#ffb86a",
-                "inverse-on-surface": "#2d3137",
-                "secondary-fixed-dim": "#b7c8dd",
-                "tertiary-container": "#44bbef",
-                "on-secondary-fixed-variant": "#384859",
-                "background": "#10141a",
-                "primary-container": "#f69a1b",
-                "on-tertiary-fixed-variant": "#004d67",
-                "secondary-fixed": "#d3e4fa",
-                "on-tertiary-fixed": "#001e2b",
-                "on-primary-fixed": "#2c1700",
-                "on-surface-variant": "#d9c3ae"
-              },
-              fontFamily: {
-                "headline": ["Manrope"],
-                "body": ["Inter"],
-                "label": ["Space Grotesk"]
-              },
-              borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
-            },
-          },
-        }
-        </script>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Abdirahman Hassan | Full-Stack Developer</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
         <style>
-.material-symbols-outlined {
-    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+:root {
+    --primary: #0f172a;
+    --secondary: #1e293b;
+    --accent: #3b82f6;
+    --accent-hover: #2563eb;
+    --text: #f8fafc;
+    --text-muted: #94a3b8;
+    --border: #334155;
+    --success: #10b981;
+    --card-bg: rgba(30, 41, 59, 0.5);
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            background-color: #10141a;
-            color: #dfe2eb;
+            font-family: 'Inter', sans-serif;
+            background: var(--primary);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Animated background gradient */
+        .bg-gradient {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(ellipse at 20% 20%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+            radial-gradient(ellipse at 80% 80%, rgba(16, 185, 129, 0.1) 0%, transparent 50%),
+            radial-gradient(ellipse at 50% 50%, rgba(139, 92, 246, 0.05) 0%, transparent 50%);
+        pointer-events: none;
+        z-index: -1;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1.5rem 5%;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--text);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo::before {
+            content: '</>';
+            color: var(--accent);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--text);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 0 5%;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            animation: fadeInUp 1s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 50px;
+            font-size: 0.875rem;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .hero-badge::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: var(--success);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--text) 0%, var(--text-muted) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero h1 span {
+            color: var(--accent);
+            -webkit-text-fill-color: var(--accent);
+        }
+
+        .hero-description {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.875rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+            border: 2px solid var(--accent);
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-hover);
+            border-color: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.5);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text);
+            border: 2px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 3rem;
+        }
+
+        .social-links a {
+            width: 44px;
+            height: 44px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 6rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .section-header h2::before {
+            content: '';
+            width: 40px;
+            height: 2px;
+            background: var(--accent);
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        /* Skills Grid */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-category {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.3s;
+        }
+
+        .skill-category:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.3);
+        }
+
+        .skill-category h3 {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--accent);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            padding: 0.375rem 0.875rem;
+            background: var(--secondary);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-size: 0.875rem;
+            color: var(--text);
+            font-family: 'JetBrains Mono', monospace;
+            transition: all 0.2s;
+        }
+
+        .skill-tag:hover {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: white;
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--accent), transparent);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .project-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+        }
+
+        .project-card:hover::before {
+            opacity: 1;
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1rem;
+        }
+
+        .project-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .project-title:hover {
+            color: var(--accent);
+        }
+
+        .project-links {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .project-link {
+            width: 36px;
+            height: 36px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .project-link:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            background: rgba(59, 130, 246, 0.1);
+        }
+
+        .project-description {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tech-badge {
+            padding: 0.25rem 0.75rem;
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--accent);
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* Education Section */
+        .education-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .education-card::after {
+            content: '🎓';
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            font-size: 2rem;
+            opacity: 0.2;
+        }
+
+        .education-header {
+            margin-bottom: 1rem;
+        }
+
+        .education-degree {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 0.25rem;
+        }
+
+        .education-school {
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        .education-date {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+
+        .education-details {
+            color: var(--text-muted);
+            list-style: none;
+        }
+
+        .education-details li {
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.5rem;
+        }
+
+        .education-details li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+
+        /* Contact Section */
+        .contact {
+            text-align: center;
+            padding: 6rem 5%;
+        }
+
+        .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact p {
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-email {
+            font-size: 1.5rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .contact-email:hover {
+            transform: scale(1.05);
+            text-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem 5%;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 4rem 5%;
+            }
+        }
+
+        /* Scroll animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
         </style>
     </head>
-    <body class="font-body selection:bg-primary/30 selection:text-primary">
-        <!-- TopNavBar -->
-        <nav class="fixed top-0 w-full z-50 bg-[#10141a]/60 backdrop-blur-xl bg-gradient-to-b from-[#f69a1b]/5 to-transparent">
-            <div class="flex justify-between items-center max-w-7xl mx-auto px-8 py-4">
-                <div class="text-[#f69a1b] font-black tracking-tighter text-xl">AHASSAN.ZIG</div>
-                <div class="hidden md:flex items-center gap-8 font-['Manrope'] tracking-tighter uppercase text-sm font-bold">
-                    <a class="text-[#f69a1b] border-b-2 border-[#f69a1b] pb-1" href="/">Home</a>
-                    <a class="text-[#dfe2eb] hover:text-[#ffbe77] transition-colors" href="about/">About</a>
-                    <a class="text-[#dfe2eb] hover:text-[#ffbe77] transition-colors" href="projects/">Projects</a>
-                    <a class="text-[#dfe2eb] hover:text-[#ffbe77] transition-colors" href="contact/">Contact</a>
+    <body>
+        <div class="bg-gradient"></div>
+
+        <!-- Navigation -->
+        <nav>
+            <a href="#" class="logo">Abdirahman</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero" id="about">
+            <div class="hero-content">
+                <div class="hero-badge">Available for opportunities</div>
+                <h1>Full-Stack Developer crafting <span>robust backends</span> and <span>intuitive frontends</span></h1>
+                <p class="hero-description">
+                Motivated developer with expertise in Go, Vue.js, and cloud technologies. 
+                I build scalable APIs, design efficient databases, and create seamless user experiences. 
+                Passionate about clean code, system architecture, and solving real-world problems through technology.
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="mailto:abdixcom@gmail.com" class="btn btn-secondary">Get In Touch</a>
                 </div>
-                <div class="flex items-center gap-4">
-                    <button class="p-2 hover:bg-[#1c2026] rounded-md transition-all duration-300 text-[#dfe2eb] active:scale-95 transition-transform">
-                        <span class="material-symbols-outlined" data-icon="code">code</span>
-                    </button>
-                    <button class="p-2 hover:bg-[#1c2026] rounded-md transition-all duration-300 text-[#dfe2eb] active:scale-95 transition-transform">
-                        <span class="material-symbols-outlined" data-icon="terminal">terminal</span>
-                    </button>
+                <div class="social-links">
+                    <a href="https://github.com/Abdirahman04" target="_blank" aria-label="GitHub">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
+                    <a href="https://abdixcom.onrender.com" target="_blank" aria-label="Website">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+                    </a>
+                    <a href="mailto:abdixcom@gmail.com" aria-label="Email">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    </a>
                 </div>
             </div>
-        </nav>
-        <main>
-            <!-- Hero Section -->
-            <section class="relative min-h-screen flex items-center pt-24 pb-20 px-8 max-w-7xl mx-auto">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                    <div class="lg:col-span-8">
-                        <div class="mb-6 inline-flex items-center gap-2 bg-surface-container-low px-4 py-2 rounded-full border border-outline-variant/10">
-                            <span class="w-2 h-2 bg-primary-container rounded-full animate-pulse"></span>
-                            <span class="font-label text-xs uppercase tracking-widest text-primary">Based in Nairobi, Kenya</span>
-                        </div>
-                        <h1 class="font-headline text-6xl md:text-8xl font-extrabold tracking-tighter text-on-surface mb-8">
-                            Architecting <span class="text-primary-container">System</span> Stability.
-                        </h1>
-                        <p class="font-body text-lg md:text-xl text-on-surface-variant max-w-2xl leading-relaxed mb-10">
-                        I am Abdirahman Hassan, a full-stack engineer building high-performance applications with a focus on memory safety and technical elegance. Currently obsessed with the <span class="text-primary italic">Zig</span> philosophy of simplicity and control.
-                        </p>
-                        <div class="flex flex-wrap gap-6">
-                            <button class="bg-primary-container text-on-primary-container px-8 py-4 font-label font-bold uppercase tracking-wider text-sm rounded shadow-[inset_0px_1px_0px_rgba(255,255,255,0.1)] hover:brightness-110 active:scale-95 transition-all">
-                                View Manifest
-                            </button>
-                            <button class="border border-outline-variant/30 text-primary px-8 py-4 font-label font-bold uppercase tracking-wider text-sm rounded hover:bg-surface-container transition-all">
-                                Read Blog
-                            </button>
-                        </div>
-                    </div>
-                    <div class="lg:col-span-4 relative hidden lg:block">
-                        <div class="aspect-square bg-surface-container-high rounded-xl overflow-hidden relative group">
-                            <img alt="Technical abstract hardware" class="w-full h-full object-cover opacity-60 mix-blend-luminosity group-hover:opacity-100 transition-opacity duration-700" data-alt="Close up view of high performance computer hardware circuit board" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLSUa9TX0U7Uf8eFvmTtaaUX5BptGHp2lrQ_AZt1GlzudlujJF4lLrQBuKXFTUU0WqJiHg0p3ftkX-AcMDKUU63B0JRVqBuIF5sVz5iEy-xhhl4mkXtHCyEoqs2COQrSLp15lXD00wNYXe4yM8gRmf5teV7VlbhnXbWDdj-e00qxkkQxlowC5xuqlMsESjG3gMR7JB6GhzECxO_jOzIh6kCFHaSHHUZbL5lSAW-mPWkGKCrXQctQefR7E6GOMrS0WpCnFFZuz99CWR"/>
-                            <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
-                            <div class="absolute bottom-6 left-6 right-6">
-                                <div class="font-label text-[10px] uppercase tracking-[0.2em] text-primary mb-2">Current Activity</div>
-                                <div class="font-body text-sm font-medium">Refactoring Kernel Modules</div>
-                            </div>
-                        </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <div class="section-header fade-in">
+                <h2>Technical Skills</h2>
+                <p>Technologies I work with to bring ideas to life</p>
+            </div>
+            <div class="skills-container">
+                <div class="skill-category fade-in">
+                    <h3>Frontend</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Vue.js</span>
+                        <span class="skill-tag">Pinia</span>
+                        <span class="skill-tag">Svelte</span>
                     </div>
                 </div>
-            </section>
-            <!-- Skills Section (Tonal Shift) -->
-            <section class="bg-surface-container-low py-24 px-8">
-                <div class="max-w-7xl mx-auto">
-                    <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-                        <div>
-                            <span class="font-label text-xs uppercase tracking-[0.3em] text-primary block mb-4">Core Competencies</span>
-                            <h2 class="font-headline text-4xl md:text-5xl font-bold tracking-tight">Technical Arsenal</h2>
-                        </div>
-                        <div class="font-label text-sm text-on-surface-variant max-w-xs text-right hidden md:block">
-                            Proprietary stack optimized for concurrency, safety, and rapid deployment.
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-outline-variant/10">
-                        <!-- Skill Item -->
-                        <div class="bg-surface p-8 group hover:bg-surface-container transition-colors">
-                            <span class="material-symbols-outlined text-primary mb-6 text-3xl" data-icon="memory">memory</span>
-                            <h3 class="font-headline text-xl font-bold mb-4">Systems Engineering</h3>
-                            <p class="font-body text-sm text-on-surface-variant mb-6">Low-level optimization using Zig and Rust. Manual memory management specialist.</p>
-                            <div class="font-label text-[10px] uppercase tracking-widest text-primary/60">Zig / C / LLVM</div>
-                        </div>
-                        <!-- Skill Item -->
-                        <div class="bg-surface p-8 group hover:bg-surface-container transition-colors">
-                            <span class="material-symbols-outlined text-primary mb-6 text-3xl" data-icon="layers">layers</span>
-                            <h3 class="font-headline text-xl font-bold mb-4">Full-Stack Flow</h3>
-                            <p class="font-body text-sm text-on-surface-variant mb-6">Designing reactive interfaces with TypeScript and high-throughput Go backends.</p>
-                            <div class="font-label text-[10px] uppercase tracking-widest text-primary/60">Next.js / Go / Bun</div>
-                        </div>
-                        <!-- Skill Item -->
-                        <div class="bg-surface p-8 group hover:bg-surface-container transition-colors">
-                            <span class="material-symbols-outlined text-primary mb-6 text-3xl" data-icon="database">database</span>
-                            <h3 class="font-headline text-xl font-bold mb-4">Data Persistence</h3>
-                            <p class="font-body text-sm text-on-surface-variant mb-6">Complex schema design and query optimization for distributed databases.</p>
-                            <div class="font-label text-[10px] uppercase tracking-widest text-primary/60">Postgres / Redis / Scylla</div>
-                        </div>
-                        <!-- Skill Item -->
-                        <div class="bg-surface p-8 group hover:bg-surface-container transition-colors">
-                            <span class="material-symbols-outlined text-primary mb-6 text-3xl" data-icon="terminal">terminal</span>
-                            <h3 class="font-headline text-xl font-bold mb-4">DevOps &amp; Cloud</h3>
-                            <p class="font-body text-sm text-on-surface-variant mb-6">Container orchestration and automated CI/CD pipelines for zero-downtime.</p>
-                            <div class="font-label text-[10px] uppercase tracking-widest text-primary/60">Docker / K8s / AWS</div>
-                        </div>
+                <div class="skill-category fade-in">
+                    <h3>Backend</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Go</span>
+                        <span class="skill-tag">Gin</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Zig</span>
+                        <span class="skill-tag">REST APIs</span>
                     </div>
                 </div>
-            </section>
-            <!-- Featured Work Section -->
-            <section class="py-24 px-8 max-w-7xl mx-auto">
-                <div class="mb-16">
-                    <span class="font-label text-xs uppercase tracking-[0.3em] text-primary block mb-4">Selected Deployments</span>
-                    <h2 class="font-headline text-4xl md:text-5xl font-bold tracking-tight">Featured Projects</h2>
+                <div class="skill-category fade-in">
+                    <h3>Databases</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">Schema Design</span>
+                    </div>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
-                    <!-- Large Project Card -->
-                    <div class="md:col-span-7 bg-surface-container-low overflow-hidden group">
-                        <div class="aspect-video bg-surface-container-high overflow-hidden relative">
-                            <img alt="Blockchain visualization" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80" data-alt="Abstract 3D digital network of floating geometric nodes and lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGoRMwwsoGGPqZCqw_ajCtu0YYjkwxYDsoYVt5dkREBbvj1xsBPaMO2zxe6ulUsMUBHQOBFSjQhmAhdQRs56daIHAsXVYgYQZ3WVKcwRgCoosPvxwxyoTRLwps2NNMRStLfJ6pUlpjrVq4TwfCr76B_qN_WJwRznSSwPycrnar6qKQdkoqenF8obz8MrInuhrcWDtVpxAckQtI6PGgkjpiZy2j4CuOxxq6dtLeD-D_GB-FG7Vv2LnaubWUfWM48dmsvR4lWUCI9vOo"/>
-                            <div class="absolute top-4 right-4 bg-surface/80 backdrop-blur px-3 py-1 rounded">
-                                <span class="font-label text-[10px] uppercase text-primary">In Production</span>
-                            </div>
-                        </div>
-                        <div class="p-8">
-                            <div class="flex items-center gap-4 mb-4">
-                                <span class="font-label text-xs text-primary bg-primary/5 px-2 py-1">2024</span>
-                                <span class="font-label text-xs text-on-surface-variant">Distributed Computing</span>
-                            </div>
-                            <h3 class="font-headline text-2xl font-bold mb-4">ZigMesh: Peer-to-Peer OS</h3>
-                            <p class="font-body text-on-surface-variant leading-relaxed mb-8">
-                            A decentralized operating system kernel built entirely in Zig, prioritizing low-latency networking and verifiable cryptographic state across nodes.
-                            </p>
-                            <a class="inline-flex items-center gap-2 font-label text-sm uppercase font-bold text-primary group-hover:gap-4 transition-all underline decoration-primary/20 underline-offset-8 decoration-2 hover:decoration-primary" href="#">
-                                Explore Repository <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+                <div class="skill-category fade-in">
+                    <h3>Cloud & DevOps</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">AWS EC2</span>
+                        <span class="skill-tag">S3</span>
+                        <span class="skill-tag">CloudFront</span>
+                        <span class="skill-tag">Render</span>
+                        <span class="skill-tag">Git</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <div class="section-header fade-in">
+                <h2>Featured Projects</h2>
+                <p>Building real-world solutions with modern technologies</p>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <a href="https://github.com/Abdirahman04/dataforge-server" class="project-title" target="_blank">
+                            DataForge Server
+                        </a>
+                        <div class="project-links">
+                            <a href="https://github.com/Abdirahman04/dataforge-server" class="project-link" target="_blank" aria-label="GitHub">
+                                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                             </a>
                         </div>
                     </div>
-                    <!-- Secondary Projects Stack -->
-                    <div class="md:col-span-5 space-y-8">
-                        <!-- Small Project 1 -->
-                        <div class="bg-surface-container-low p-6 flex gap-6 items-center group">
-                            <div class="w-24 h-24 shrink-0 bg-surface-container-highest rounded overflow-hidden">
-                                <img alt="Server rack" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" data-alt="Server hardware interior with glowing blue lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_lqPXgatqdC5n8buprts7g0Y8Ta2ACek5NIo3wUgZA9JfRa6ZA0tCJwPoNtbFIpShbRMdlNSLvIpOkS9tYXxhaf-5Y4gfiuoajohsnVPW6etRq0FccT0JFog3xCDpUYHPdkTtEqPCJzohpKgZGV9QHqkEXsg59lcjxQX9xglNtN3RYTPv8a88uWjiol1RZVS8711HmZHVeM6yhrRRazCe7YPLFusOjm2CJ3CJYD4DthPm5iUS8pDhdiRagaG6MP4WfMtRA0QClxYe"/>
-                            </div>
-                            <div>
-                                <h4 class="font-headline font-bold text-lg mb-2">TurboDB-Core</h4>
-                                <p class="font-body text-xs text-on-surface-variant line-clamp-2">LSM-tree based key-value store optimized for NVMe drives using direct I/O.</p>
-                                <div class="mt-3 font-label text-[10px] text-tertiary">Rust / Storage</div>
-                            </div>
-                        </div>
-                        <!-- Small Project 2 -->
-                        <div class="bg-surface-container-low p-6 flex gap-6 items-center group">
-                            <div class="w-24 h-24 shrink-0 bg-surface-container-highest rounded overflow-hidden">
-                                <img alt="Global network" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" data-alt="Digital globe representation with glowing connection lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYuGtO1lFP5-HFDleGv446CY5fGte4_QcokLvMiz_BJoJLnnZJ53yeOi0nnULEheayzqbaxogUUSris9Doa9GwCDewAl_R0ykYhcpv05HBCI3nTnZndPXzrmnVQGo6wEu9SZfgNFTbZ-8e7TWlljmapE1G7AUhrlFuADCSyG0G4Z7MqFUPNZdfee49cwRetxUqBzOeUikhWQQLgufjpyokLWrpa287tnN8srTLzsT8_qzWEjSmeFOzCq1VAGAbMZRdO7hnleev8hqE"/>
-                            </div>
-                            <div>
-                                <h4 class="font-headline font-bold text-lg mb-2">AeroEngine.io</h4>
-                                <p class="font-body text-xs text-on-surface-variant line-clamp-2">Real-time collaboration engine supporting 50k+ concurrent websocket connections.</p>
-                                <div class="mt-3 font-label text-[10px] text-tertiary">Go / WebSockets</div>
-                            </div>
-                        </div>
-                        <!-- Small Project 3 -->
-                        <div class="bg-surface-container-low p-6 flex gap-6 items-center group">
-                            <div class="w-24 h-24 shrink-0 bg-surface-container-highest rounded overflow-hidden">
-                                <img alt="Processor chip" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" data-alt="Computer microprocessor chip on green motherboard circuit" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzvBhI8uH23__43DWL32UQvskgEW-14lC8qDszOqREeaqUt9XHcdftTav4ZgAKaxcszNPvN0ZiC3aMqb5wyKUEdaQ6gg4St7CtixoZXljxf-ZJjeRchCAU_8ajJWP-8IDzRtPzEPmMWJfx5UC5BQf4-OuBvXp4VO7lDDSNCXp_lRY2K0gcxB9h5gsmPqJznXdcPp_6lbKuBjAT-vgkGAZ-meBDfln91sF8H3FtAx05PLcCy_ATCj6JHGBGNtpEz69non3WXJuh-OVI"/>
-                            </div>
-                            <div>
-                                <h4 class="font-headline font-bold text-lg mb-2">SynthCompiler</h4>
-                                <p class="font-body text-xs text-on-surface-variant line-clamp-2">LLVM-based compiler for a custom hardware description language.</p>
-                                <div class="mt-3 font-label text-[10px] text-tertiary">C++ / LLVM</div>
-                            </div>
-                        </div>
+                    <p class="project-description">
+                    High-performance Go API that generates randomized test data from customizable JSON schemas. 
+                    Supports multiple data types including strings, integers, booleans, and complex nested structures. 
+                    Enables developers to rapidly populate databases with realistic mock data for testing.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Go</span>
+                        <span class="tech-badge">REST API</span>
+                        <span class="tech-badge">JSON Schema</span>
                     </div>
                 </div>
-            </section>
-            <!-- CTA Section -->
-            <section class="py-24 px-8 max-w-7xl mx-auto mb-20">
-                <div class="bg-surface-container-highest p-12 md:p-20 relative overflow-hidden rounded">
-                    <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/10 to-transparent pointer-events-none"></div>
-                    <div class="relative z-10 max-w-2xl">
-                        <h2 class="font-headline text-4xl md:text-5xl font-extrabold tracking-tight mb-6">Need a <span class="text-primary italic">resilient</span> architecture?</h2>
-                        <p class="font-body text-on-surface-variant text-lg mb-10">
-                        I am currently available for high-impact engineering roles and consulting on systems-level architecture. Let's build something that lasts.
-                        </p>
-                        <div class="flex flex-col sm:flex-row gap-4">
-                            <button class="bg-primary-container text-on-primary-container px-8 py-4 font-label font-bold uppercase text-sm rounded hover:brightness-110 transition-all">
-                                Initialize Project
-                            </button>
-                            <button class="bg-surface-container text-on-surface px-8 py-4 font-label font-bold uppercase text-sm rounded border border-outline-variant/20 hover:bg-surface-bright transition-all">
-                                Download CV.pdf
-                            </button>
+
+                <!-- Project 2 -->
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <a href="https://github.com/Abdirahman04/bytebank-gin" class="project-title" target="_blank">
+                            ByteBank Gin
+                        </a>
+                        <div class="project-links">
+                            <a href="https://github.com/Abdirahman04/bytebank-gin" class="project-link" target="_blank" aria-label="GitHub">
+                                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            </a>
                         </div>
                     </div>
+                    <p class="project-description">
+                    Complete backend API for banking operations built with Go and the Gin framework. 
+                    Implements secure account management, transactions, and balance inquiries with proper 
+                    validation and error handling. Demonstrates understanding of financial domain logic and secure API design.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Go</span>
+                        <span class="tech-badge">Gin</span>
+                        <span class="tech-badge">Banking API</span>
+                        <span class="tech-badge">Security</span>
+                    </div>
                 </div>
-            </section>
-        </main>
-        <!-- Footer -->
-        <footer class="w-full border-t border-[#f69a1b]/10 bg-[#0a0e14]">
-            <div class="flex flex-col md:flex-row justify-between items-center py-12 px-8 max-w-7xl mx-auto">
-                <div class="mb-8 md:mb-0">
-                    <div class="text-[#dfe2eb] font-bold text-lg mb-2">AHASSAN.ZIG</div>
-                    <p class="font-['Space_Grotesk'] text-xs tracking-widest uppercase text-[#dfe2eb]/60">© 2024 Abdirahman Hassan. Built with Zig philosophy.</p>
+
+                <!-- Project 3 -->
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <a href="https://github.com/Abdirahman04/kmwallet-client-pinia" class="project-title" target="_blank">
+                            KMWallet Client
+                        </a>
+                        <div class="project-links">
+                            <a href="https://github.com/Abdirahman04/kmwallet-client-pinia" class="project-link" target="_blank" aria-label="GitHub">
+                                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                    Responsive frontend for a banking application built with Vue.js 3 and Pinia state management. 
+                    Features centralized state management for complex user data and transaction flows, 
+                    with a modular component architecture and reusable UI elements.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Vue.js</span>
+                        <span class="tech-badge">Pinia</span>
+                        <span class="tech-badge">JavaScript</span>
+                        <span class="tech-badge">Frontend Architecture</span>
+                    </div>
                 </div>
-                <div class="flex gap-8 font-['Space_Grotesk'] text-xs tracking-widest uppercase">
-                    <a class="text-[#dfe2eb]/60 hover:text-[#f69a1b] transition-colors duration-200" href="#">GitHub</a>
-                    <a class="text-[#dfe2eb]/60 hover:text-[#f69a1b] transition-colors duration-200" href="#">LinkedIn</a>
-                    <a class="text-[#dfe2eb]/60 hover:text-[#f69a1b] transition-colors duration-200" href="#">Twitter</a>
+
+                <!-- Project 4 -->
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <span class="project-title">
+                            BookStore App
+                        </span>
+                        <div class="project-links">
+                            <span style="color: var(--text-muted); font-size: 0.875rem;">Academic</span>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                    Full-stack e-commerce application for online book sales developed as a final diploma project. 
+                    Implemented product catalog, shopping cart, user authentication, and order management. 
+                    Demonstrated end-to-end development capability from database design to deployment.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Full-Stack</span>
+                        <span class="tech-badge">E-Commerce</span>
+                        <span class="tech-badge">Web Development</span>
+                    </div>
                 </div>
             </div>
-        </footer>
-    </body></html>
+        </section>
 
+        <!-- Education Section -->
+        <section id="education">
+            <div class="section-header fade-in">
+                <h2>Education</h2>
+                <p>Academic background and continuous learning</p>
+            </div>
+            <div class="education-card fade-in">
+                <div class="education-header">
+                    <div class="education-degree">Diploma in Web Development and Programming</div>
+                    <div class="education-school">College of Advanced Technology, Nairobi</div>
+                    <div class="education-date">Graduated 2025</div>
+                </div>
+                <ul class="education-details">
+                    <li>Comprehensive training in full-stack web development</li>
+                    <li>Final project: Built and deployed production-ready e-commerce application</li>
+                    <li>Coursework: Database design, API development, frontend frameworks, cloud deployment</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <h2 class="fade-in">Let's Work Together</h2>
+            <p class="fade-in">I'm currently available for full-time opportunities, freelance projects, and open-source collaborations. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+            <a href="mailto:abdixcom@gmail.com" class="contact-email fade-in">abdixcom@gmail.com</a>
+
+            <div class="social-links fade-in" style="justify-content: center; margin-top: 2rem;">
+                <a href="https://github.com/Abdirahman04" target="_blank" aria-label="GitHub">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+                <a href="https://abdixcom.onrender.com" target="_blank" aria-label="Website">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+                </a>
+                <a href="tel:+254115800303" aria-label="Phone">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2026 Abdirahman Hassan. Built with passion and clean code.</p>
+        </footer>
+
+        <script>
+            // Scroll animation observer
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+            // Smooth scroll for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
